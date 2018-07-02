@@ -1,0 +1,16 @@
+{
+  "name": "redirect",
+  "description": "redirect to url with sub-domain",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "author": "Jef King",
+  "engines": {
+    "node": ">=6.11.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+  }
+}
