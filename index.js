@@ -1,7 +1,8 @@
 var http = require("http");
 
 http.createServer(function (req, res) {
-    let subdomain = "www" + req.headers.host;
+    let sub = process.env.SUBDOMAIN || "www";
+    let subdomain = sub + "." + req.headers.host;
 
     res.writeHead(301, {"Location": subdomain});
     res.end();
