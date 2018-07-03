@@ -4,8 +4,13 @@ http.createServer(function (req, res) {
     let sub = process.env.SUBDOMAIN || "www";
     let protocol = process.env.PROTOCOL || "http";
 
-    let subdomain = protocol + "://" + sub + "." + req.headers.host;
+    let location = protocol + "://" + sub + "." + req.headers.host;
 
-    res.writeHead(301, { "Location": subdomain });
+    if (req.query)
+    {
+        location += "?" + req.query;
+    }
+
+    res.writeHead(301, { "Location": location });
     res.end();
 }).listen(process.env.PORT || 3000);
