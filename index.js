@@ -8,7 +8,7 @@ http.createServer(function (req, res) {
 
     if (req.url)
     {
-        location += "/" + req.url;
+        location += req.url;
     }
 
     res.writeHead(301, { "Location": location });
