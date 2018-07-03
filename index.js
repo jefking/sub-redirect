@@ -6,9 +6,9 @@ http.createServer(function (req, res) {
 
     let location = protocol + "://" + sub + "." + req.headers.host;
 
-    if (req.query)
+    if (req.url)
     {
-        location += "?" + req.query;
+        location += "/" + req.url;
     }
 
     res.writeHead(301, { "Location": location });
