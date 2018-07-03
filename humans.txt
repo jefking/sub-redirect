@@ -1,0 +1,4 @@
+name: Jef King
+site: http://jefking.me
+twitter: @JefKing_
+location: Vancouver, British Columbia, Canada
